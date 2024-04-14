@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+  };
+
   return (
     <div className=" w-2/5 mx-auto">
-      <form className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -36,13 +43,20 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
+        <p className=" text-center">
+          New to here? Please
+          <Link to="/register">
+            <button className="btn btn-link">Register</button>
+          </Link>
+        </p>
+        <div className=" text-center">
+          <p>Or</p>
+          <div className=" mt-4">
+            <button className=" btn ">Google Login</button>
+            <button className=" btn ml-4">Github Login</button>
+          </div>
+        </div>
       </form>
-      <p className=" text-center">
-        Please
-        <Link to="/register">
-          <button className="btn btn-link">Register</button>
-        </Link>
-      </p>
     </div>
   );
 };

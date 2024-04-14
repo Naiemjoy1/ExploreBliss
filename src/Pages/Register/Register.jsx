@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password);
+  };
   return (
     <div className=" w-2/5 mx-auto">
-      <form className="card-body">
+      <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Your Name</span>
@@ -40,7 +47,7 @@ const Register = () => {
             required
           />
         </div>
-        <div className="form-control">
+        {/* <div className="form-control">
           <label className="label">
             <span className="label-text">Confirm Password</span>
           </label>
@@ -51,17 +58,17 @@ const Register = () => {
             className="input input-bordered"
             required
           />
-        </div>
+        </div> */}
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
+        <p className=" text-center">
+          Already have account? Please
+          <Link to="/login">
+            <button className="btn btn-link">Login</button>
+          </Link>
+        </p>
       </form>
-      <p className=" text-center">
-        Please
-        <Link to="/login">
-          <button className="btn btn-link">Login</button>
-        </Link>
-      </p>
     </div>
   );
 };
