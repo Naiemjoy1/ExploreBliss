@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import useAuth from "../../Components/Hooks/useAuth";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
+  const { signInUser } = useAuth();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
-    <div className=" w-2/5 mx-auto">
-      <form onSubmit={handleLogin} className="card-body">
+    <div className=" w-2/5 mx-auto mb-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -20,8 +34,11 @@ const Login = () => {
             name="email"
             placeholder="email"
             className="input input-bordered"
-            required
+            {...register("email", { required: true })}
           />
+          {errors.email && (
+            <span className=" text-red-500">This field is required</span>
+          )}
         </div>
         <div className="form-control">
           <label className="label">
@@ -32,8 +49,11 @@ const Login = () => {
             name="password"
             placeholder="password"
             className="input input-bordered"
-            required
+            {...register("password", { required: true })}
           />
+          {errors.password && (
+            <span className=" text-red-500">This field is required</span>
+          )}
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">
               Forgot password?
@@ -49,14 +69,9 @@ const Login = () => {
             <button className="btn btn-link">Register</button>
           </Link>
         </p>
-        <div className=" text-center">
-          <p>Or</p>
-          <div className=" mt-4">
-            <button className=" btn ">Google Login</button>
-            <button className=" btn ml-4">Github Login</button>
-          </div>
-        </div>
+        <div className=" text-center"></div>
       </form>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
