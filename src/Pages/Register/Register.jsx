@@ -1,21 +1,56 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Components/Hooks/useAuth";
+import { useEffect, useState } from "react";
+import { IoMdEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
+
+  const passwordValidation = (value) => {
+    const regexUpperCase = /[A-Z]/;
+    const regexLowerCase = /[a-z]/;
+
+    if (!regexUpperCase.test(value)) {
+      return "Password must contain at least one uppercase letter";
+    }
+
+    if (!regexLowerCase.test(value)) {
+      return "Password must contain at least one lowercase letter";
+    }
+
+    if (value.length < 6) {
+      return "Password must be at least 6 characters long";
+    }
+
+    return true;
+  };
+
   const onSubmit = (data) => {
     const { email, password, image, fullName } = data;
-    createUser(email, password).then((result) => {
-      updateUserProfile(fullName, image);
-      console.log(result);
-    });
+    createUser(email, password)
+      .then((result) => {
+        if (image) {
+          updateUserProfile(fullName, image);
+        }
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
+
   return (
     <div className=" lg:w-2/5 mx-auto">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -65,29 +100,28 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            className="input input-bordered"
-            {...register("password", { required: true })}
-          />
+          <div className=" relative ">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="password"
+              className="input input-bordered w-full"
+              {...register("password", {
+                required: true,
+                validate: passwordValidation,
+              })}
+            />
+            <span
+              className=" absolute top-4 right-4"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <IoMdEye /> : <IoIosEyeOff />}
+            </span>
+          </div>
           {errors.password && (
-            <span className=" text-red-500">This field is required</span>
+            <span className=" text-red-500">{errors.password.message}</span>
           )}
         </div>
-        {/* <div className="form-control">
-          <label className="label">
-            <span className="label-text">Confirm Password</span>
-          </label>
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            className="input input-bordered"
-            required
-          />
-        </div> */}
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>

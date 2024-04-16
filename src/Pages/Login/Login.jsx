@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Components/Hooks/useAuth";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const Login = () => {
   const { signInUser } = useAuth();
@@ -11,6 +14,11 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
+
   const onSubmit = (data) => {
     const { email, password } = data;
     signInUser(email, password)
@@ -18,12 +26,13 @@ const Login = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
+        toast.error("Email or password do not match!");
       });
   };
 
   return (
-    <div className=" lg:w-2/5 mx-auto mb-10">
+    <div className=" lg:w-2/5 mx-auto min-h-[calc(100vh-246px)]">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -72,6 +81,7 @@ const Login = () => {
         <div className=" text-center"></div>
       </form>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };

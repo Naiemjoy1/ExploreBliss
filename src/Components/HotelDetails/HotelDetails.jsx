@@ -1,7 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { MdLocalPhone } from "react-icons/md";
 import { GiCheckMark } from "react-icons/gi";
+import { useEffect } from "react";
 const HotelDetails = () => {
+  useEffect(() => {
+    document.title = "Hotels";
+  }, []);
   const hotels = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
