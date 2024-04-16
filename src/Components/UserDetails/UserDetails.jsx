@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import useAuth from "../Hooks/useAuth";
 
 const UserDetails = () => {
+  const { user } = useAuth();
+
   useEffect(() => {
     document.title = "User";
   }, []);
-  const { user } = useAuth();
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-246px)]">
@@ -20,10 +21,10 @@ const UserDetails = () => {
           />
         </div>
       </div>
-      <div className="text-center">
-        <p className="mb-2">Name: {user?.displayName || "user"}</p>
-        <p className="mb-2">Email: {user?.email || "email"}</p>
-        <p className="mb-2">PhotoUrl: {user?.photoURL || "url"}</p>
+      <div className="text-center grid grid-cols-1">
+        <p className="mb-2">Name: {user?.displayName || "User"}</p>
+        <p className="mb-2">Email: {user?.email || "Email"}</p>
+        <p className="mb-2">Photo URL: {user?.photoURL || "Photo URL"}</p>
       </div>
     </div>
   );
