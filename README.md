@@ -14,33 +14,38 @@
 # Feature Details
 
 - Home
-  -- Banner
-  -- Properties
+
+  - Banner
+  - Properties
 
 - Register
-  -- Here is Name, Email, photoUrl, Password should given
-  -- In Password there must have UpperCase, LowerCase, Length 6 character
-  -- Redirect Link for Login Page
+
+  - Here is Name, Email, photoUrl, Password should given
+  - In Password there must have UpperCase, LowerCase, Length 6 character
+  - Redirect Link for Login Page
 
 - Login
-  -- Email, Password Login
-  -- Google Login, Github Login
-  -- Redirect link for Register Page
+
+  - Email, Password Login
+  - Google Login, Github Login
+  - Redirect link for Register Page
 
 - User Details
-  -- Show this tab when User Login
-  -- Show User Avater
-  -- Email, Name , PhotoUrl
+
+  - Show this tab when User Login
+  - Show User Avater
+  - Email, Name , PhotoUrl
 
 - User Updates
-  -- Show this tab when User Login
-  -- Update User Avater
-  -- Update Email, Name , PhotoUrl
+
+  - Show this tab when User Login
+  - Update User Avater
+  - Update Email, Name , PhotoUrl
 
 - NPM Packages Uses
-  -- Tailwind
-  -- Daisy Ui
-  -- Props Types
-  -- Animate.css
-  -- React Hook From
-  -- AOS Package
+  - Tailwind
+  - Daisy Ui
+  - Props Types
+  - Animate.css
+  - React Hook From
+  - AOS Package
