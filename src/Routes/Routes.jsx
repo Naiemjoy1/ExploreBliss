@@ -6,6 +6,7 @@ import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Register from "../Pages/Register/Register";
 import UserDetails from "../Components/UserDetails/UserDetails";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import HotelDetails from "../Components/HotelDetails/HotelDetails";
 
 const routes = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const routes = createBrowserRouter([
             <UserDetails></UserDetails>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/hotel/:id",
+        element: <HotelDetails></HotelDetails>,
+        loader: () => fetch("../hotel.json"),
       },
     ],
   },
