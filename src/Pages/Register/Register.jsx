@@ -3,15 +3,16 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../Components/Hooks/useAuth";
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser, updateUserProfile } = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { email, password, image, fullName } = data;
     createUser(email, password).then((result) => {
+      updateUserProfile(fullName, image);
       console.log(result);
     });
   };
@@ -44,7 +45,7 @@ const Register = () => {
             className="input input-bordered"
             {...register("email", { required: true })}
           />
-          {errors.fullName && (
+          {errors.email && (
             <span className=" text-red-500">This field is required</span>
           )}
         </div>
@@ -54,10 +55,10 @@ const Register = () => {
           </label>
           <input
             type="imageUrl"
-            name="imageUrl"
+            name="image"
             placeholder="imageUrl"
             className="input input-bordered"
-            {...register("imageUrl", { required: false })}
+            {...register("image", { required: false })}
           />
         </div>
         <div className="form-control">
@@ -71,7 +72,7 @@ const Register = () => {
             className="input input-bordered"
             {...register("password", { required: true })}
           />
-          {errors.fullName && (
+          {errors.password && (
             <span className=" text-red-500">This field is required</span>
           )}
         </div>

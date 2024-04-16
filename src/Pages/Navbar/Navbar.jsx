@@ -3,6 +3,7 @@ import useAuth from "../../Components/Hooks/useAuth";
 
 const Navbar = () => {
   const { logout, user } = useAuth();
+  console.log(user);
   const navLinks = (
     <>
       <li>
@@ -13,6 +14,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/login">Login</NavLink>
+      </li>
+      <li>
+        <NavLink to="/user">User Details</NavLink>
       </li>
     </>
   );
@@ -58,7 +62,10 @@ const Navbar = () => {
             <label tabIndex={0} className=" btn btn-ghost btn-circle avatar">
               <div className=" w-10 rounded-full">
                 <img
-                  src="https://i.ibb.co/cFXnHG0/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg"
+                  src={
+                    user?.photoURL ||
+                    "https://i.ibb.co/cFXnHG0/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg"
+                  }
                   alt=""
                 />
               </div>
@@ -68,7 +75,9 @@ const Navbar = () => {
               className=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <button className="btn btn-sm btn-ghost">Farhan</button>
+                <button className="btn btn-sm btn-ghost">
+                  {user?.displayName || "user"}
+                </button>
               </li>
               <li>
                 <button onClick={logout} className="btn btn-sm btn-ghost">

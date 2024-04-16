@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Seaside Resort",
+    "segment_name": "Luxury",
+    "description": "Experience luxury living by the sea with breathtaking ocean views.",
+    "price": "$500 per night",
+    "status": "sale",
+    "area": "5000 sqft",
+    "location": "Malibu, California",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/ZTQVwTF/1.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Mountain Retreat",
+    "segment_name": "Family",
+    "description": "Escape to the mountains for a cozy retreat surrounded by nature.",
+    "price": "$300 per night",
+    "status": "rent",
+    "area": "3000 sqft",
+    "location": "Aspen, Colorado",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/RYLSvSk/2.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "City Oasis Hotel",
+    "segment_name": "Business",
+    "description": "Conveniently located in the heart of the city for business travelers.",
+    "price": "$200 per night",
+    "status": "sale",
+    "area": "2000 sqft",
+    "location": "New York City, New York",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/bgZ7MPd/3.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Tropical Paradise Resort",
+    "segment_name": "Luxury",
+    "description": "Indulge in luxury amidst lush tropical surroundings.",
+    "price": "$600 per night",
+    "status": "sale",
+    "area": "4500 sqft",
+    "location": "Maui, Hawaii",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/3BX5JFn/4.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Lakefront Lodge",
+    "segment_name": "Family",
+    "description": "Enjoy a peaceful getaway by the lake with activities for the whole family.",
+    "price": "$250 per night",
+    "status": "rent",
+    "area": "2800 sqft",
+    "location": "Lake Tahoe, California",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/1ZpjB4Q/5.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Urban Chic Boutique Hotel",
+    "segment_name": "Business",
+    "description": "Stay in style at our boutique hotel in the heart of the urban jungle.",
+    "price": "$180 per night",
+    "status": "sale",
+    "area": "1800 sqft",
+    "location": "Chicago, Illinois",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/yRxpjD4/6.jpg"
+  },
+  {
+    "id": 7,
+    "estate_title": "Ski Chalet Retreat",
+    "segment_name": "Adventure",
+    "description": "Experience the ultimate ski vacation in our cozy mountain chalet.",
+    "price": "$400 per night",
+    "status": "rent",
+    "area": "3200 sqft",
+    "location": "Whistler, British Columbia",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/v3K9R3m/7.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Desert Oasis Resort",
+    "segment_name": "Luxury",
+    "description": "Escape to a luxurious desert retreat with stunning desert views.",
+    "price": "$700 per night",
+    "status": "sale",
+    "area": "4000 sqft",
+    "location": "Scottsdale, Arizona",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/PQy5vjd/8.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Historic Inn",
+    "segment_name": "Family",
+    "description": "Step back in time and experience the charm of our historic inn.",
+    "price": "$150 per night",
+    "status": "rent",
+    "area": "2500 sqft",
+    "location": "Charleston, South Carolina",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/1MqpLG0/9.jpg"
+  }
+]

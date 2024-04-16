@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
@@ -25,6 +26,20 @@ const FrirebaseProvider = ({ children }) => {
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //   update user profile
+  const updateUserProfile = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    })
+      .then(() => {
+        // profile update
+      })
+      .catch((error) => {
+        // An error occurred
+      });
   };
 
   //   sign in user
@@ -66,6 +81,7 @@ const FrirebaseProvider = ({ children }) => {
     githubLogin,
     logout,
     user,
+    updateUserProfile,
   };
 
   return (
