@@ -36,11 +36,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/hotel/:id",
-        element: (
-          <PrivateRoute>
-            <HotelDetails></HotelDetails>
-          </PrivateRoute>
-        ),
+        element: <HotelDetails></HotelDetails>,
         loader: () => fetch("../hotel.json"),
       },
     ],
