@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div className=" w-2/5 mx-auto mb-10">
+    <div className=" lg:w-2/5 mx-auto mb-10">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
           <label className="label">
