@@ -75,7 +75,7 @@ const HotelDetails = () => {
         <div className=" mt-5">
           <p className=" text-2xl">Contract Our Agent</p>
           <div className=" mt-5 flex gap-4">
-            <div className=" w-96">
+            <div className=" lg:w-96">
               <img src={agent_image} alt="" />
             </div>
             <div>
