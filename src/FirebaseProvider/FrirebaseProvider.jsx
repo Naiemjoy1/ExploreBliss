@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -33,13 +34,12 @@ const FrirebaseProvider = ({ children }) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
-    })
-      .then(() => {
-        // profile update
-      })
-      .catch((error) => {
-        // An error occurred
-      });
+    }).then(() => {
+      // profile update
+    });
+    //   .catch((error) => {
+    //     // An error occurred
+    //   });
   };
 
   //   sign in user
@@ -87,6 +87,10 @@ const FrirebaseProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={allValues}>{children}</AuthContext.Provider>
   );
+};
+
+FrirebaseProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default FrirebaseProvider;

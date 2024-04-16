@@ -9,7 +9,12 @@
     "area": "5000 sqft",
     "location": "Malibu, California",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/DKtxpXJ/pexels-thorsten-technoman-338504.jpg"
+    "image": "https://i.ibb.co/DKtxpXJ/pexels-thorsten-technoman-338504.jpg",
+    "background": "https://i.ibb.co/10GQbjQ/pexels-asad-photo-maldives-1266831.jpg",
+    "agent_name": "Benjamin",
+    "agent_position": "Director",
+    "agent_image": "https://i.ibb.co/jfM9PZk/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 2,
@@ -21,7 +26,11 @@
     "area": "3000 sqft",
     "location": "Aspen, Colorado",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/RYLSvSk/2.jpg"
+    "image": "https://i.ibb.co/RYLSvSk/2.jpg",
+    "agent_name": "Alexander",
+    "agent_position": "Sales Manager",
+    "agent_image": "https://i.ibb.co/cFXnHG0/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 3,
@@ -33,7 +42,11 @@
     "area": "2000 sqft",
     "location": "New York City, New York",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/bgZ7MPd/3.jpg"
+    "image": "https://i.ibb.co/bgZ7MPd/3.jpg",
+    "agent_name": "Olivia",
+    "agent_position": "Marketing Manager",
+    "agent_image": "https://i.ibb.co/LSVx9ht/istockphoto-1317804578-612x612.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 4,
@@ -45,7 +58,11 @@
     "area": "4500 sqft",
     "location": "Maui, Hawaii",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/3BX5JFn/4.jpg"
+    "image": "https://i.ibb.co/3BX5JFn/4.jpg",
+    "agent_name": "Benjamin",
+    "agent_position": "Director",
+    "agent_image": "https://i.ibb.co/jfM9PZk/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 5,
@@ -57,7 +74,11 @@
     "area": "2800 sqft",
     "location": "Lake Tahoe, California",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/1ZpjB4Q/5.jpg"
+    "image": "https://i.ibb.co/1ZpjB4Q/5.jpg",
+    "agent_name": "Olivia",
+    "agent_position": "Marketing Manager",
+    "agent_image": "https://i.ibb.co/LSVx9ht/istockphoto-1317804578-612x612.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 6,
@@ -69,7 +90,11 @@
     "area": "1800 sqft",
     "location": "Chicago, Illinois",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/yRxpjD4/6.jpg"
+    "image": "https://i.ibb.co/yRxpjD4/6.jpg",
+    "agent_name": "Alexander",
+    "agent_position": "Sales Manager",
+    "agent_image": "https://i.ibb.co/cFXnHG0/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 7,
@@ -81,7 +106,11 @@
     "area": "3200 sqft",
     "location": "Whistler, British Columbia",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/v3K9R3m/7.jpg"
+    "image": "https://i.ibb.co/v3K9R3m/7.jpg",
+    "agent_name": "Benjamin",
+    "agent_position": "Director",
+    "agent_image": "https://i.ibb.co/jfM9PZk/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 8,
@@ -93,7 +122,11 @@
     "area": "4000 sqft",
     "location": "Scottsdale, Arizona",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/PQy5vjd/8.jpg"
+    "image": "https://i.ibb.co/PQy5vjd/8.jpg",
+    "agent_name": "Alexander",
+    "agent_position": "Sales Manager",
+    "agent_image": "https://i.ibb.co/cFXnHG0/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   },
   {
     "id": 9,
@@ -105,6 +138,10 @@
     "area": "2500 sqft",
     "location": "Charleston, South Carolina",
     "facilities": ["living room", "swimming pool", "kitchen"],
-    "image": "https://i.ibb.co/1MqpLG0/9.jpg"
+    "image": "https://i.ibb.co/1MqpLG0/9.jpg",
+    "agent_name": "Olivia",
+    "agent_position": "Marketing Manager",
+    "agent_image": "https://i.ibb.co/LSVx9ht/istockphoto-1317804578-612x612.jpg",
+    "agent_phone": ["99001234567", "99001234567", "99001234567"]
   }
 ]

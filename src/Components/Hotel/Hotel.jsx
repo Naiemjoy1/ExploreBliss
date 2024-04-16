@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Hotel = ({ hotel }) => {
@@ -24,6 +25,17 @@ const Hotel = ({ hotel }) => {
       </div>
     </div>
   );
+};
+
+Hotel.propTypes = {
+  hotel: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    estate_title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    segment_name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Hotel;
