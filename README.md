@@ -1,7 +1,7 @@
 # ExploreBliss
 
--- live Link - https://helpful-swan-50b1e5.netlify.app/
--- git link - https://github.com/programming-hero-web-course-4/b9a9-real-estate-Naiemjoy1
+- live Link - https://helpful-swan-50b1e5.netlify.app/
+- git link - https://github.com/programming-hero-web-course-4/b9a9-real-estate-Naiemjoy1
 
 # Features
 
