@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Components/Hooks/useAuth";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
@@ -8,6 +8,7 @@ import { useEffect } from "react";
 
 const Login = () => {
   const { signInUser } = useAuth();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -27,6 +28,7 @@ const Login = () => {
         console.log(result.user);
         toast.success("Login successful!");
         reset();
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);

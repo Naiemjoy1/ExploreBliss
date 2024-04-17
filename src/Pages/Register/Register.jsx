@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Components/Hooks/useAuth";
 import { useEffect, useState } from "react";
@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -50,6 +51,8 @@ const Register = () => {
         console.log(result);
         e.target.reset();
         toast.success("Registration successful");
+        navigate("/");
+        window.location.reload();
       })
       .catch((error) => {
         console.error(error);
