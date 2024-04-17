@@ -13,6 +13,7 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   useEffect(() => {
@@ -24,6 +25,8 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Login successful!");
+        reset();
       })
       .catch((error) => {
         console.error(error);

@@ -4,6 +4,9 @@ import useAuth from "../../Components/Hooks/useAuth";
 import { useEffect, useState } from "react";
 import { IoMdEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
@@ -46,9 +49,11 @@ const Register = () => {
         }
         console.log(result);
         e.target.reset();
+        toast.success("Registration successful");
       })
       .catch((error) => {
         console.error(error);
+        toast.error("Registration failed. Please try again.");
       });
   };
 
@@ -133,6 +138,7 @@ const Register = () => {
           </Link>
         </p>
       </form>
+      <ToastContainer />
     </div>
   );
 };
