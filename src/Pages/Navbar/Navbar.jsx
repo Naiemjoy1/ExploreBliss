@@ -86,7 +86,7 @@ const Navbar = () => {
             >
               <li>
                 <button className="btn btn-sm btn-ghost">
-                  {user?.displayName || "user"}
+                  {user?.displayName || user?.email || "user"}
                 </button>
               </li>
               <li>
