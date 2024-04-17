@@ -37,7 +37,7 @@ const Register = () => {
     return true;
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     const { email, password, image, fullName } = data;
     createUser(email, password)
       .then((result) => {
@@ -45,6 +45,7 @@ const Register = () => {
           updateUserProfile(fullName, image);
         }
         console.log(result);
+        e.target.reset();
       })
       .catch((error) => {
         console.error(error);
