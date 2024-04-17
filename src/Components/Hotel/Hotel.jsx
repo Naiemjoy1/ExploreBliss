@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hotel = ({ hotel }) => {
+  AOS.init();
   const { id, estate_title, image, segment_name, status, price } = hotel;
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-xl">
+      <div
+        data-aos="fade-up"
+        className="card card-compact bg-base-100 shadow-xl"
+      >
         <figure>
           <img className="h-[275px] w-full" src={image} alt="Shoes" />
         </figure>

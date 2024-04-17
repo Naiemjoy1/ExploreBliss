@@ -1,11 +1,14 @@
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  AOS.init();
   useEffect(() => {
     document.title = "About";
   }, []);
   return (
-    <div className="text-center mx-auto">
+    <div data-aos="fade-up" className="text-center mx-auto">
       <div className=" mt-5">
         <p className=" text-2xl">
           Welcome to the largest search engine for rentals
