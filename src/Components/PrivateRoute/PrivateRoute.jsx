@@ -7,14 +7,7 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh", // Adjust the height as needed
-        }}
-      >
+      <div className=" flex justify-center items-center h-screen">
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
