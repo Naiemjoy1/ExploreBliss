@@ -19,13 +19,6 @@ const About = () => {
           src="https://i.ibb.co/Bc86ytp/panoramic-maldives-island-beach-tropical-landscape-summer-panorama-white-sand-with-palm-trees-sea-lu.jpg"
           alt=""
         />
-        <p className=" mt-5 text-center">
-          At ExploreBliss, we are dedicated to creating unforgettable
-          experiences for travelers seeking the perfect getaway. Our mission is
-          to inspire exploration and discovery, providing travelers with
-          exceptional accommodations and personalized service every step of the
-          way.
-        </p>
       </div>
       <div>
         <div>
