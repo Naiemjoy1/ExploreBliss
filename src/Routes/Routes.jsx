@@ -8,6 +8,7 @@ import UserDetails from "../Components/UserDetails/UserDetails";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import HotelDetails from "../Components/HotelDetails/HotelDetails";
 import DetailsUpdate from "../Components/DetailsUpdate/DetailsUpdate";
+import About from "../Components/About/About";
 
 const routes = createBrowserRouter([
   {
@@ -51,6 +52,14 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("../hotel.json"),
+      },
+      {
+        path: "/about",
+        element: (
+          <PrivateRoute>
+            <About></About>
+          </PrivateRoute>
+        ),
       },
     ],
   },

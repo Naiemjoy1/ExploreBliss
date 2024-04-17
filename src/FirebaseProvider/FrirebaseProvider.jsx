@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
+  TwitterAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -18,6 +19,7 @@ export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
+const twitterProvider = new TwitterAuthProvider();
 
 const FrirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -59,6 +61,11 @@ const FrirebaseProvider = ({ children }) => {
     return signInWithPopup(auth, githubProvider);
   };
 
+  // twitter login
+  const twitterLogin = () => {
+    return signInWithPopup(auth, twitterProvider);
+  };
+
   //   logout
   const logout = () => {
     setUser(null);
@@ -82,6 +89,7 @@ const FrirebaseProvider = ({ children }) => {
     logout,
     user,
     updateUserProfile,
+    twitterLogin,
   };
 
   return (
