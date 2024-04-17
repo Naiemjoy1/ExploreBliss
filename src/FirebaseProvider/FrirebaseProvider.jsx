@@ -23,11 +23,13 @@ const twitterProvider = new TwitterAuthProvider();
 
 const FrirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   //   console.log(user);
 
   //   create user
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -47,38 +49,47 @@ const FrirebaseProvider = ({ children }) => {
   //   sign in user
 
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   //   google login
 
   const googleLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   //   github login
 
   const githubLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 
   // twitter login
   const twitterLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, twitterProvider);
   };
 
   //   logout
   const logout = () => {
+    setLoading(true);
     setUser(null);
     signOut(auth);
   };
   //observer
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        setLoading(false);
       }
     });
+    return () => {
+      unSubscribe();
+    };
   }, []);
 
   const allValues = {
@@ -90,6 +101,7 @@ const FrirebaseProvider = ({ children }) => {
     user,
     updateUserProfile,
     twitterLogin,
+    loading,
   };
 
   return (

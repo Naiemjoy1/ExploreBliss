@@ -3,7 +3,22 @@ import useAuth from "../Hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh", // Adjust the height as needed
+        }}
+      >
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
 
   if (user) {
     return children;
