@@ -50,32 +50,32 @@ const FrirebaseProvider = ({ children }) => {
   //   sign in user
 
   const signInUser = (email, password) => {
-    setLoading(true);
+    setLoading(false);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   //   google login
 
   const googleLogin = () => {
-    setLoading(true);
+    setLoading(false);
     return signInWithPopup(auth, googleProvider);
   };
   //   github login
 
   const githubLogin = () => {
-    setLoading(true);
+    setLoading(false);
     return signInWithPopup(auth, githubProvider);
   };
 
   // twitter login
   const twitterLogin = () => {
-    setLoading(true);
+    setLoading(false);
     return signInWithPopup(auth, twitterProvider);
   };
 
   //   logout
   const logout = () => {
-    setLoading(true);
+    setLoading(false);
     setUser(null);
     signOut(auth);
   };
