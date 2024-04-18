@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 const UserDetails = () => {
   const { user } = useAuth();
   const [name, setName] = useState(user?.displayName || "");
-  const [email, setEmail] = useState(user?.email || "");
+  // const [email, setEmail] = useState(user?.email || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
 
   useEffect(() => {
@@ -18,9 +18,9 @@ const UserDetails = () => {
     setName(e.target.value);
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
   const handlePhotoURLChange = (e) => {
     setPhotoURL(e.target.value);
@@ -60,13 +60,13 @@ const UserDetails = () => {
           className="mb-2 input input-bordered"
           placeholder="Name"
         />
-        <input
+        {/* <input
           type="email"
           value={email}
           onChange={handleEmailChange}
           className="mb-2 input input-bordered"
           placeholder="Email"
-        />
+        /> */}
         <input
           type="text"
           value={photoURL}
