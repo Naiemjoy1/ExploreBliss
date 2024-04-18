@@ -30,7 +30,7 @@ const FrirebaseProvider = ({ children }) => {
   //   create user
 
   const createUser = (email, password) => {
-    setLoading(false);
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -50,43 +50,41 @@ const FrirebaseProvider = ({ children }) => {
   //   sign in user
 
   const signInUser = (email, password) => {
-    setLoading(false);
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   //   google login
 
   const googleLogin = () => {
-    setLoading(false);
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   //   github login
 
   const githubLogin = () => {
-    setLoading(false);
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 
   // twitter login
   const twitterLogin = () => {
-    setLoading(false);
+    setLoading(true);
     return signInWithPopup(auth, twitterProvider);
   };
 
   //   logout
   const logout = () => {
-    setLoading(false);
+    setLoading(true);
     setUser(null);
     signOut(auth);
   };
   //observer
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        setLoading(false);
-      }
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unSubscribe();
