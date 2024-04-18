@@ -30,7 +30,7 @@ const FrirebaseProvider = ({ children }) => {
   //   create user
 
   const createUser = (email, password) => {
-    setLoading(true);
+    setLoading(false);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
