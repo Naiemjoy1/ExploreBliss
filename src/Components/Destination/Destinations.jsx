@@ -4,12 +4,12 @@ import "aos/dist/aos.css";
 const Destinations = () => {
   AOS.init();
   return (
-    <div className=" lg:relative mt-10">
-      <div className=" bg-black lg:h-[350px]">
-        <h2 className=" text-xl text-center text-yellow-500 mt-10">
+    <div className=" lg:relative lg:mt-10">
+      <div className=" bg-black lg:h-[350px] p-4">
+        <h2 className=" lg:text-xl text-center text-yellow-500 ">
           What is your destination?
         </h2>
-        <h2 className=" text-6xl text-white text-center font-extralight">
+        <h2 className=" text-xl md:text-2xl lg:text-6xl text-white text-center font-extralight">
           Most popular destinations
         </h2>
       </div>

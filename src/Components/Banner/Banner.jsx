@@ -2,11 +2,11 @@ const Banner = () => {
   return (
     <div className=" lg:flex justify-between items-center">
       <div className="lg:w-2/5 text-center">
-        <p className=" text-5xl">Your Dream Vacation</p>
-        <p className=" text-2xl">5000+ villas for rent worldwide</p>
+        <p className=" text-2xl md:text-3xl lg:text-5xl">Your Dream Vacation</p>
+        <p className=" lg:text-2xl">5000+ villas for rent worldwide</p>
       </div>
       <div className=" lg:w-3/5">
-        <div className="carousel w-full h-96">
+        <div className="carousel w-full md:h-72 lg:h-96 my-5">
           <div id="slide1" className="carousel-item relative w-full">
             <img src="https://i.ibb.co/kSFdKPx/3.jpg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

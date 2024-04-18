@@ -2,15 +2,17 @@ const GetTips = () => {
   return (
     <div>
       <div
-        className="hero h-[450px] mb-10 mt-10"
+        className="hero lg:h-[450px] mb-10 mt-10 "
         style={{
           backgroundImage: "url(https://i.ibb.co/vBMZjLX/2.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-60 p-4"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Get the travel tips</h1>
+            <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold">
+              Get the travel tips
+            </h1>
             <p className="mb-5">
               Get the insider travel tips, inspiration, discounts and homestay
               recommendations from the best professionals
