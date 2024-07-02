@@ -1,51 +1,62 @@
 # ExploreBliss
 
-- live Link - https://helpful-swan-50b1e5.netlify.app/
-- git link - https://github.com/programming-hero-web-course-4/b9a9-real-estate-Naiemjoy1
+ExploreBliss is a premium real estate web application focused exclusively on luxury properties like penthouses, beachfront properties, and villas. It offers a seamless experience for users to browse, book, and review exclusive luxury real estate listings.
 
-# Features
+## Live Link
 
-- Home
-- Register
-- Login
-- User Details
-- User Updates
+[Visit the live site](https://helpful-swan-50b1e5.netlify.app/)
 
-# Feature Details
+## Project Overview
 
-- Home
+ExploreBliss aims to provide a sophisticated platform for discovering and booking luxury real estate properties. It addresses the need for an exclusive, user-friendly interface for high-end property listings, ensuring a streamlined experience from browsing to booking.
 
-  - Banner
-  - Properties
+## Project Concept
 
-- Register
+This project is designed to cater to the luxury real estate market, showcasing premium properties with detailed descriptions, high-quality images, and real-time availability. The website is responsive, offering a consistent user experience across devices.
 
-  - Here is Name, Email, photoUrl, Password should given
-  - In Password there must have UpperCase, LowerCase, Length 6 character
-  - Redirect Link for Login Page
+## Key Features
 
-- Login
+1. **Real-time Booking**: Ensures up-to-date availability and allows users to book properties instantly.
+2. **User Reviews**: Users can submit and view reviews for properties, enhancing transparency and trust.
+3. **Profile Management**: Users can update their profile information and manage their bookings seamlessly.
 
-  - Email, Password Login
-  - Google Login, Github Login
-  - Redirect link for Register Page
+## Technologies Used
 
-- User Details
+- **Frontend**: React, React Router, Tailwind CSS, Axios, Swiper Slider, AOS
+- **Backend**: Node.js, Express.js, MongoDB, Firebase Authentication
+- **Other Tools**: Material-UI, Stripe for payments, Cookie-parser, React-Helmet
 
-  - Show this tab when User Login
-  - Show User Avater
-  - Email, Name , PhotoUrl
+## Cloning and Running Locally
 
-- User Updates
+### Prerequisites
 
-  - Show this tab when User Login
-  - Update User Avater
-  - Update Email, Name , PhotoUrl
+- Node.js
+- npm or yarn
 
-- NPM Packages Uses
-  - Tailwind
-  - Daisy Ui
-  - Props Types
-  - Animate.css
-  - React Hook From
-  - AOS Package
+### Installation
+
+1. Clone the client-side repository:
+
+   ```sh
+   git clone https://github.com/Naiemjoy1/ExploreBliss
+   cd ExploreBliss-client
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the client:
+
+   ```sh
+   cd ExploreBliss-client
+   npm start
+   ```
+
+2. Start the server:
+
+   ```sh
+   cd ExploreBliss-server
+   npm start
+   ```
+
+---
