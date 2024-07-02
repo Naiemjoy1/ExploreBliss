@@ -9,6 +9,7 @@ import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import HotelDetails from "../Components/HotelDetails/HotelDetails";
 import DetailsUpdate from "../Components/DetailsUpdate/DetailsUpdate";
 import About from "../Components/About/About";
+import Slider from "../Components/Swiper/Slider";
 
 const routes = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const routes = createBrowserRouter([
             <About></About>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/slider",
+        element: <Slider></Slider>,
       },
     ],
   },

@@ -48,14 +48,14 @@ const Register = () => {
         if (image) {
           updateUserProfile(fullName, image);
         }
-        console.log(result);
+        // console.log(result);
         e.target.reset();
         toast.success("Registration successful");
-        navigate("/");
-        window.location.reload();
+        // navigate("/");
+        // window.location.reload();
       })
       .catch((error) => {
-        console.error(error);
+        // console.error(error);
         toast.error("Registration failed. Please try again.");
       });
   };
